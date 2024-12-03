@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar class="transparent-bg">
+    <ion-row>
+      <ion-col size-md="3">
+        <ion-img src="/assets/images/duoc_transp.png" style="width: 120px; height: auto; margin-left: 10px;"></ion-img>
+      </ion-col>
+      <ion-col size-md="6" class="center-text">
+        <div class="animated-text" style="font-size: 30px;">{{'AppName' | translate}}</div>
+      </ion-col>
+      <ion-col size-md="3"></ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div class="centered-container">
+    <div class="forgot-password-card">
+      <img src="/assets/images/duoc-logo2.png" alt="Logo DUOC UC" class="logo-uc" style="max-width: 150px; margin-bottom: 20px;">
+      
+      <h2>Sistema de asistencia DUOC UC</h2>
+      
+      <div class="image-container">
+        <img src="/assets/images/correcto.png" alt="Icono Correcto" class="success-image" style="max-width: 60%; margin: 20px auto;">
+      </div>
+
+      <h3>{{'Recuperar.Form.Correcto' | translate}}</h3>
+      <p>{{'Recuperar.Form.Es' | translate}}</p>
+      <p style="font-weight: bold; font-size: 1.2em;">{{ password }}</p>
+
+      <ion-button expand="block" color="primary" (click)="login()">
+        {{'Recuperar.Form.Inicio' | translate}}
+      </ion-button>
+    </div>
+  </div>
+</ion-content>

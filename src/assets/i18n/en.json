@@ -1,0 +1,153 @@
+{
+    "AppName": "DUOC Assistance",
+    "AuthorText": "Developed by:",
+    "Author": "",
+    "Language": "Language",
+    "Language.English": "English",
+    "Language.Spanish": "Español",
+    "Language.Mapudungun": "Mapudungun",
+    
+    "Start.StartNewExperience": "Start a new experience",
+
+    "Login.Title.Login": "Login",
+    "Login.Label.Email": "Email",
+    "Login.Label.Cuenta": "account",
+    "Login.Placeholder.Email": "Enter your email here",
+    "Login.Label.Password": "Password",
+    "Login.Placeholder.Password": "Enter your password here",
+    "Login.Button.Login": "Login",
+    "Login.Button.Signin": "Sign Up",
+    "Login.Button.ForgotPassword": "Forgot my password",
+    "Login.Button.DarkMode": "Dark Mode",
+    "Login.Button.Tema": "Theme",
+    "Login.Placeholder.Cuenta": "Enter your account here",
+
+    "WelcomePage.Title.Wellcome": "Welcome!",
+
+    "HomePage.Button.Wellcome": "Home",
+    "HomePage.Button.Scan": "Scan",
+    "HomePage.Button.Dinosaur": "Dinosaur",
+    ".Button.Forum": "Forum",
+    "HomePage.Button.Map": "Map",
+    "HomePage.Button.Miclase": "My class",
+    "HomePage.Button.Misdatos": "My data",
+    "HomePage.Button.Detener": "Stop QR scanning",
+
+    "ThemePage.Label.ColorTheme": "Color Theme:",
+    "ThemePage.Color.Light": "Light",
+    "ThemePage.Color.Dark": "Dark",
+    "ThemePage.Color.Green": "Green",
+    "ThemePage.Color.Red": "Red",
+    "ThemePage.Color.Facebook": "Facebook",
+    "ThemePage.Color.Instagram": "Instagram",
+    "ThemePage.Color.Duoc": "Duoc",
+    
+    "ThemePage.Button.Primary": "Primary Button",
+    "ThemePage.Button.Secondary": "Secondary Button",
+    "ThemePage.Button.Tertiary": "Tertiary Button",
+    "ThemePage.Button.Success": "Success Button",
+    "ThemePage.Button.Warning": "Warning Button",
+    "ThemePage.Button.Danger": "Danger Button",
+    "ThemePage.Button.Light": "Light Button",
+    "ThemePage.Button.Dark": "Dark Button",
+    "ThemePage.Button.Home": "Home",
+    "ThemePage.Button.Logout": "Logout",
+    
+    "ThemePage.Card.Title": "Card Title",
+    "ThemePage.Card.Subtitle": "Card Subtitle",
+    "ThemePage.Card.Content": "This is the content of the card. You can customize the colors of the card and its content.",
+    
+    "ThemePage.List.Title": "Lists",
+    "ThemePage.List.Item1": "List Item 1",
+    "ThemePage.List.Item2": "List Item 2",
+    "ThemePage.List.Item3": "List Item 3",
+    
+    "ThemePage.Calendar.Title": "Calendars",
+    
+    "ThemePage.Form.Title": "Data Entry",
+    "ThemePage.Form.NameLabel": "Name",
+    "ThemePage.Form.NamePlaceholder": "Enter your name",
+    "ThemePage.Form.DescriptionLabel": "Description",
+    "ThemePage.Form.DescriptionPlaceholder": "Write a description here...",
+    "ThemePage.Form.ToggleLabel": "Enable notifications",
+    "ThemePage.Form.CheckboxLabel": "I accept the terms",
+
+    "Recuperar.Form.Recuperar": "Recover your password",
+    "Recuperar.Form.Paso1": "Step 1",
+    "Recuperar.Form.Ingresa": "Enter your email",
+    "Recuperar.Form.Correo": "email:",
+    "Recuperar.Form.Contraseña": "Recover Password",
+    "Recuperar.Form.Volver": "Return to login",
+    "Recuperar.Form.Paso2": "Step 2",
+    "Recuperar.Form.Responde": "Answer the question:",
+    "Recuperar.Form.Usuario": "User:",
+    "Recuperar.Form.Respuesta": "Enter Response: ",
+    "Recuperar.Form.Correcto": "CORRECT!",
+    "Recuperar.Form.Es": "Your password is: ",
+    "Recuperar.Form.Inicio": "Go to login",
+    "Recuperar.Form.Incorrecto": "Incorrect Answer",
+    "Recuperar.Form.Sorry": "We are sorry but the data entered is not correct",
+
+    "Datos.From.Datos": "My Data, ",
+    "Datos.From.Cuenta": "Account",
+    "Datos.From.User": "User Name",
+    "Datos.From.Apellido": "Surname",
+    "Datos.From.Correo": "E-Mail",
+    "Datos.From.Direccion": "Address",
+    "Datos.From.Pregunta": "Secret Question",
+    "Datos.From.Respuesta": "Secret Answer",
+    "Datos.From.Educacion": "Education",
+    "Datos.From.Nacimiento": "Birth",
+    "Datos.From.Pass": "Password",
+    "Datos.From.Actualizar": "Update data",
+
+    "Footer.From.Gestion": "Publication Management",
+    "Footer.From.Titulo": "Title",
+    "Footer.From.Ingresa": "Enter the title of the publication",
+    "Footer.From.Desc": "Description",
+    "Footer.From.Escribe": "Write the content of the publication",
+    "Footer.From.Limpiar": "Clear",
+    "Footer.From.Guardar": "Save",
+    "Footer.From.Reciente": "Recent Publications",
+    "Footer.From.Public": "Publication #",
+
+    "Clase.From.Necesitas": "You need to scan a QR code",
+
+    "Map.From.Aqui": "Here",
+    "Map.From.Ruta": "Route",
+
+    "Miclase.From.Detalles": "Subject Details",
+    "Miclase.From.Sede": "Campus",
+    "Miclase.From.Asignatura": "Subject",
+    "Miclase.From.Seccion": "Section",
+    "Miclase.From.Nombre": "Subject Name",
+    "Miclase.From.Dia": "Day",
+    "Miclase.From.Inicio": "Start Block",
+    "Miclase.From.Termino": "End Block",
+    "Miclase.From.Hora": "Start Time",
+    "Miclase.From.Horat": "End Time",
+
+
+
+    "Forum.Title": "Forum",
+    "Forum.ManagePosts": "Manage Posts",
+    "Forum.NewPost": "New Post",
+    "Forum.EditPost": "Editing post #",
+    "Forum.TitlePlaceholder": "Enter the title of the post",
+    "Forum.DescriptionPlaceholder": "Write the content of the post",
+    "Forum.Button.Clear": "Clear",
+    "Forum.Button.Save": "Save",
+    "Forum.Button.Update": "Update",
+    "Forum.RecentPosts": "Recent Posts",
+    "Forum.PostNumber": "Post #",
+    "Forum.Author": "Author",
+    "Forum.Edit": "Edit",
+    "Forum.Delete": "Delete"
+
+
+
+
+}
+
+
+

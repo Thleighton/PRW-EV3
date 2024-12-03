@@ -1,0 +1,28 @@
+{
+  "posts": [
+    {
+      "id": "859a",
+      "title": "a",
+      "body": "a",
+      "author": " ",
+      "date": "2024-11-15",
+      "authorImage": "/api/placeholder/100/100"
+    },
+    {
+      "id": "f2b4",
+      "title": "asd",
+      "body": "asdasd",
+      "author": " ",
+      "date": "2024-11-15",
+      "authorImage": "/api/placeholder/100/100"
+    },
+    {
+      "id": "0c1a",
+      "title": "dasd",
+      "body": "asdas",
+      "author": " ",
+      "date": "2024-11-18",
+      "authorImage": "/api/placeholder/100/100"
+    }
+  ]
+}

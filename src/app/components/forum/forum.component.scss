@@ -1,0 +1,92 @@
+/* Fondo general del foro */
+.forum-content {
+  --background: #000000;
+  background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.8), rgba(34, 34, 34, 0.8)), url('/assets/images/1725086412.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px;
+}
+
+/* Tarjetas de publicaciones y gestiones */
+.gestion-publicaciones-card, .publicaciones-recientes-card, .publicacion-card {
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo negro translúcido */
+  border-radius: 15px;
+  margin: 20px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6); /* Sombra oscura */
+  color: #ffffff;
+}
+
+/* Títulos */
+.publicaciones-title, h4, h6 {
+  text-align: center;
+  font-weight: bold;
+  color: #ffffff; /* Texto blanco */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Botonera del formulario */
+.botonera-form {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.boton-limpiar {
+  --background: transparent;
+  --border-color: #ffcc00;
+  --color: #ffcc00; /* Color dorado */
+  border: 2px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.boton-limpiar:hover {
+  --background: rgba(255, 204, 0, 0.2); /* Fondo dorado translúcido */
+}
+
+.boton-guardar {
+  --background: #007bff;
+  --color: white;
+  transition: all 0.3s ease;
+}
+
+.boton-guardar:hover {
+  --background: #0056b3; /* Azul más oscuro en hover */
+}
+
+/* Botonera de publicaciones */
+.botonera-post {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 16px;
+  gap: 10px;
+}
+
+.boton-editar {
+  --background: transparent;
+  --color: #ffcc00; /* Dorado */
+  border: 2px solid #ffcc00;
+  transition: all 0.3s ease;
+}
+
+.boton-editar:hover {
+  --background: rgba(255, 204, 0, 0.2); /* Fondo dorado translúcido */
+}
+
+.boton-eliminar {
+  --background: #dc3545;
+  --color: white;
+  transition: all 0.3s ease;
+}
+
+.boton-eliminar:hover {
+  --background: #a71d2a; /* Rojo más oscuro */
+}
+
+/* Sombra en las publicaciones */
+.publicacion-card {
+  border-left: 5px solid #03030337;
+  margin-bottom: 15px;
+  box-shadow: 0px 4px 10px rgba(42, 38, 38, 0.211); /* Sombra blanca suave */
+}

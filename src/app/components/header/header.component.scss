@@ -1,0 +1,114 @@
+.animated-text {
+  font-size: 24px; /* Ajusta el tamaño del texto */
+  animation: slideConstant 8s linear infinite; /* Animación continua */
+  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+  font-size: 1rem; /* Tamaño del texto */
+  color: #ff9d00; /* Color del texto */
+  text-align: center; /* Alineación del texto */
+  text-shadow: 
+    0 0 10px #000000, /* Primer nivel de sombra (más cercano al texto) */
+    0 0 20px #000000, /* Segundo nivel de sombra */
+    0 0 30px #000000, /* Tercer nivel de sombra */
+
+}
+
+/* Definir la animación continua con disolución gradual */
+@keyframes slideConstant {
+  0% {
+    transform: translateX(-80%); /* Inicia fuera de la vista desde la derecha */
+    opacity: 0; /* Comienza disuelto */
+  }
+  25% {
+    opacity: 1; /* Aparece completamente al aproximarse al centro */
+  }
+  75% {
+    opacity: 1; /* Mantiene su claridad en el centro */
+  }
+  100% {
+    transform: translateX(70%); /* Sale completamente por la izquierda */
+    opacity: 0; /* Desaparece gradualmente */
+  }
+
+}
+
+
+/* Estilos principales */
+.logo-container {
+  display: flex; /* Alinea los elementos en una fila */
+  align-items: center; /* Alinea verticalmente los elementos en el centro */
+  justify-content: flex-start; /* Alinea los elementos a la izquierda */
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 400px; /* Ajusta el ancho máximo si es necesario */
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.ion-card-content {
+  background-color: rgba(0, 0, 0, 0.322); /* Fondo semitransparente */
+  border-radius: 15px; /* Esquinas redondeadas */
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2); /* Sombra ligera */
+  padding: 20px; /* Espaciado interno */
+}
+
+/* Estilos para logo y texto */
+.logo-uc {
+  width: 60px; 
+  height: auto;
+  margin-left: 3px;
+}
+
+.logo-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 4rem;
+  font-weight: 700;
+
+  .duoc-yellow {
+    color: #F1B634;
+  }
+
+  .duoc-white {
+    color: #FFFFFF;
+  }
+}
+
+/* Estilos específicos para dispositivos en orientación retrato */
+@media screen and (orientation: portrait) {
+  .login-container {
+    width: 300px; /* Ancho adaptado para retrato */
+  }
+}
+
+/* Estilos específicos para dispositivos en orientación paisaje */
+@media screen and (orientation: landscape) {
+  .login-container {
+    width: 480px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+
+  .float-left-landscape {
+    float: left;
+  }
+
+  .float-right-landscape {
+    float: right;
+  }
+
+  .logo-uc {
+    width: 100px; 
+    height: auto;
+    margin-left: 280px; 
+  }
+}

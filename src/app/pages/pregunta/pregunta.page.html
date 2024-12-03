@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar class="transparent-bg">
+    <ion-row>
+      <ion-col size-md="3">
+        <ion-img src="/assets/images/duoc_transp.png" style="width: 120px; height: auto; margin-left: 10px;"></ion-img>
+      </ion-col>
+      <ion-col size-md="6" class="center-text">
+        <div class="animated-text" style="font-size: 30px;">{{'AppName' | translate}}</div>
+      </ion-col>
+      <ion-col size-md="3"></ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div class="centered-container">
+    <div class="forgot-password-card">
+      <img src="assets/images/duoc-logo2.png" alt="Logo DUOC UC" class="logo-uc" style="max-width: 150px; margin-bottom: 20px;">
+      
+      <h2>Sistema de asistencia DUOC UC</h2>
+      <h3>{{'Recuperar.Form.Recuperar' | translate}}</h3>
+      <p>{{'Recuperar.Form.Paso2' | translate}}: {{'Recuperar.Form.Responde' | translate}}</p>
+
+      <!-- Nombre completo del usuario -->
+      <p style="font-weight: bold;">{{ nombre }} {{ apellido }}</p>
+
+      <!-- Pregunta secreta -->
+      <ion-item>
+        <ion-label position="stacked">
+          <ion-icon slot="start" name="help-circle-outline"></ion-icon>
+          {{ preguntaSecreta }}
+        </ion-label>
+        <ion-input [(ngModel)]="respuestaSecreta" placeholder="{{'Recuperar.Form.Respuesta' | translate}}"></ion-input>
+      </ion-item>
+
+      <!-- Botones de acción -->
+      <ion-button expand="block" color="primary" (click)="recuperarContrasena()">
+        {{'Recuperar.Form.Contraseña' | translate}}
+      </ion-button>
+      <a href="#" class="login-link" style="display: block; text-align: center; margin-top: 10px;" (click)="volverAlInicio()">
+        {{'Recuperar.Form.Volver' | translate}}
+      </a>
+    </div>
+  </div>
+</ion-content>

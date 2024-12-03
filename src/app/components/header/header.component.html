@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar class="grey">
+    <!-- Logo en el centro -->
+    <div class="logo-uc">
+      <img src="assets/images/Logo_DuocUC.svg.png" alt="Logo UC" class="logo-uc" style="width: 100px; height: auto;">
+    </div>
+
+    <!-- Título del sistema -->
+    <ion-title>
+      <h3 class="animated-text"> {{ 'AppName' | translate }} </h3>
+    </ion-title>
+
+    <!-- Botones del lado derecho -->
+    <div slot="end" style="display: flex; align-items: center;">
+
+      <!-- Botón Logout -->
+      <ion-button (click)="logout()" size="small" fill="clear" style="--padding-start: 4px; --padding-end: 4px;">
+        <ion-icon name="log-out-outline" color="dark" style="font-size: 16px;"></ion-icon>
+      </ion-button>
+    </div>
+  </ion-toolbar>
+</ion-header>

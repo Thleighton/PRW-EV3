@@ -1,0 +1,104 @@
+<ion-content fullscreen>
+  <!-- Contenedor para la imagen de fondo -->
+<div class="background-image">
+  <!-- HEADER DE LA PÁG -->
+<ion-header>
+
+
+  <ion-toolbar class="grey">
+    
+    <div slot="start" class="ion-margin idioma" >
+      <app-language #selectLanguage></app-language>
+    </div>
+
+
+    <div class="logo-uc">
+      <img src="assets/images/Logo_DuocUC.svg.png" alt="Logo UC" class="logo-uc" >
+    </div>
+  
+
+    <div slot="end" class="ion-margin">
+      <ion-button id="color" class="duoc-yellow" shape="round" size="small" (click)="navigateTheme()">
+        Tema
+        <ion-icon slot="start" name="color-wand-outline"></ion-icon>
+      </ion-button>
+    </div>
+   </ion-toolbar>
+</ion-header>
+
+
+<!-- CONTENT Y FORMULARIO -->
+
+<ion-content [fullscreen]="true">
+
+  <img class="background-image" src="/assets/images/1725086412.jpg">
+  <br><br>
+  <h1 class="glow-text show-in-portrait margin-top-6"> {{ 'AppName' | translate }} </h1>
+
+  <div class="show-in-landscape">
+    <h1 class="glow-text"> {{ 'AppName' | translate }} </h1>
+  </div>
+
+
+  <ion-card class="login-container transparent-input ">
+    <ion-card-header class="show-in-portrait">
+      <ion-card-title color="light" class="glow-text">
+        <h4>
+          <b>
+            {{ 'Login.Title.Login' | translate }}
+          </b>
+        </h4>
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content class="transparent-input text-center">
+      
+      <ion-item class="margin-bottom-6 float-center-landscape">
+        <ion-input id="cuenta"
+          label="{{ 'Login.Label.Cuenta' | translate }}" 
+          labelPlacement="floating"
+          [(ngModel)]="correo" 
+          placeholder="{{ 'Login.Placeholder.Cuenta' | translate }}">
+        </ion-input>
+      </ion-item>
+
+      <ion-item class="margin-bottom-6 float-center-landscape">
+        <ion-input id="contraseña"
+          label="{{ 'Login.Label.Password' | translate }}"
+          labelPlacement="floating"
+          [(ngModel)]="password" 
+          placeholder="{{ 'Login.Placeholder.Password' | translate }}"
+          type="password">
+        </ion-input>
+      </ion-item>
+      <br>
+
+      <div class="ion-text-center margin-top-6" style="clear: both;">
+        <ion-button id="login" class="enter-button normal-text orange-buton" shape="round" (click)="login()">
+          {{ 'Login.Button.Login' | translate }}
+        </ion-button>
+      </div>
+
+    </ion-card-content>
+
+
+
+    <ion-footer>
+      <ion-button color="primary" shape="block" (click)="irAlMapa()">
+        {{ 'HomePage.Button.Map' | translate }}
+      </ion-button>
+    
+      <ion-button id="recuperar" color="secondary" shape="block" (click)="passwordRecovery()">
+        {{ 'Login.Button.ForgotPassword' | translate }}
+      </ion-button>
+
+      <ion-button color="tertiary" shape="block" (click)="registro()">
+        {{ 'Registrar' | translate }}
+      </ion-button>
+      
+    </ion-footer>
+  </ion-card>
+</ion-content>
+
+
+

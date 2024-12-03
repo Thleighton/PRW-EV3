@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar class="transparent-bg">
+    <ion-row>
+      <ion-col size-md="3">
+        <ion-img src="/assets/images/duoc_transp.png" style="width: 120px; height: auto; margin-left: 10px;"></ion-img>
+      </ion-col>
+      <ion-col size-md="6" class="center-text">
+        <div class="animated-text" style="font-size: 30px;">{{'AppName' | translate}}</div>
+      </ion-col>
+      <ion-col size-md="3"></ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="centered-container">
+    <div class="forgot-password-card">
+      <img src="/assets/images/duoc-logo2.png" alt="Logo DUOC UC" class="logo-uc" style="max-width: 150px; margin-bottom: 20px;">
+      <h2>Sistema de asistencia DUOC UC</h2>
+      <h3>{{'Recuperar.Form.Recuperar' | translate}}</h3>
+      <p>{{'Recuperar.Form.Paso1' | translate}}: {{'Recuperar.Form.Ingresa' | translate}}</p>
+
+      <ion-item>
+        <ion-label position="stacked">
+          <ion-icon slot="start" name="mail-outline"></ion-icon>
+          {{'Recuperar.Form.Correo' | translate}}
+        </ion-label>
+        <ion-input [(ngModel)]="correo" type="email" placeholder="ejm: c.aranda@duocuc.cl"></ion-input>
+      </ion-item>
+
+      <ion-button expand="block" color="primary" (click)="recuperarContrasena()">
+        {{'Recuperar.Form.Contraseña' | translate}}
+      </ion-button>
+      <a href="#" class="login-link" style="display: block; text-align: center; margin-top: 10px;">
+        {{'Recuperar.Form.Volver' | translate}}
+      </a>
+    </div>
+  </div>
+</ion-content>

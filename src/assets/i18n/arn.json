@@ -1,0 +1,137 @@
+{
+    "AppName": "Aukiñentu DUOCc",
+    "AuthorText": "Rakinon tamiñ:",
+    "Author": "",
+    "Language": "Dugün",
+    "Language.English": "English",
+    "Language.Spanish": "Español",
+    "Language.Mapudungun": "Mapudungun",
+    
+    "Start.StartNewExperience": "Eymi müley kiñe küpan trawün",
+
+    "Login.Title.Login": "Wüñolün",
+    "Login.Label.Email": "E-mail",
+    "Login.Label.Cuenta": "Cuenta",
+    "Login.Placeholder.Email": "Eymi mülen teu e-mail",
+    "Login.Label.Password": "Rakinmapu",
+    "Login.Placeholder.Password": "Eymi mülen teu rakinmapu",
+    "Login.Button.Login": "Wüñolün",
+    "Login.Button.Signin": "Trawünme",
+    "Login.Button.ForgotPassword": "Ñi rakinmapu elañmafi",
+    "Login.Button.DarkMode": "Pewma külen müleyin",
+    "Login.Button.Tema": "mülen",
+    "Login.Placeholder.Cuenta": "Eymi mülen teu cuenta",
+    
+
+    "WelcomePage.Title.Wellcome": "¡Tüfachi mülenmi!",
+
+    "HomePage.Button.Wellcome": "Wüña",
+    "HomePage.Button.Scan": "Wütran",
+    "HomePage.Button.Dinosaur": "Tüfachi Chod",
+    "HomePage.Button.Forum": "Trapu",
+    "HomePage.Button.Map": "Iñmapu",
+    "HomePage.Button.Miclase": "Ñi küla",
+    "HomePage.Button.Misdatos": "Ñi pu peñi",
+    "HomePage.Button.Detener": "Ñamün ñi QR üngün",
+
+    "ThemePage.Label.ColorTheme": "Dugün de kolor:",
+    "ThemePage.Color.Light": "Külfün",
+    "ThemePage.Color.Dark": "Pewma",
+    "ThemePage.Color.Green": "Karü",
+    "ThemePage.Color.Red": "Kelü",
+    "ThemePage.Color.Facebook": "Facebook",
+    "ThemePage.Color.Instagram": "Instagram",
+    "ThemePage.Color.Duoc": "DUOC",
+    
+    "ThemePage.Button.Primary": "Tüfachi Kutral",
+    "ThemePage.Button.Secondary": "Epü Kutral",
+    "ThemePage.Button.Tertiary": "Küla Kutral",
+    "ThemePage.Button.Success": "Kutral Mew",
+    "ThemePage.Button.Warning": "Kutral Kuifi",
+    "ThemePage.Button.Danger": "Kutral Püñeñ",
+    "ThemePage.Button.Light": "Kutral Külfün",
+    "ThemePage.Button.Dark": "Kutral Pewma",
+    "ThemePage.Button.Home": "Wüña",
+    "ThemePage.Button.Logout": "Tuway",
+
+    "ThemePage.Card.Title": "Tüfachi Rakin Tarjeta",
+    "ThemePage.Card.Subtitle": "Epü Rakin Tarjeta",
+    "ThemePage.Card.Content": "Tüfachi mülen rakin tarjetan. Eymü tayüwme kolores tami tarjeta ka mülen rakin.",
+    
+    "ThemePage.List.Title": "Listan",
+    "ThemePage.List.Item1": "Kiñe Wigkaz Ñi Listan",
+    "ThemePage.List.Item2": "Epü Wigkaz Ñi Listan",
+    "ThemePage.List.Item3": "Küla Wigkaz Ñi Listan",
+    
+    "ThemePage.Calendar.Title": "Küdaw Tüfachi",
+    
+    "ThemePage.Form.Title": "Trawün ka Eymi Ingresun",
+    "ThemePage.Form.NameLabel": "Wüñam",
+    "ThemePage.Form.NamePlaceholder": "Eymi mülen teu wüñam",
+    "ThemePage.Form.DescriptionLabel": "Püllün",
+    "ThemePage.Form.DescriptionPlaceholder": "Eymi mülen ta püllün...",
+    "ThemePage.Form.ToggleLabel": "Külfünon notificaciones",
+    "ThemePage.Form.CheckboxLabel": "Amun nien küme alka müleyfi",
+
+    "Recuperar.Form.Recuperar": "Wirintukun ñi rakiduam ñi güxam",
+    "Recuperar.Form.Paso1": "Trawun 1",
+    "Recuperar.Form.Ingresa": "Kintu müten küpa malün",
+    "Recuperar.Form.Correo": "Küpa malün:",
+    "Recuperar.Form.Contraseña": "Wirintukun güxam",
+    "Recuperar.Form.Volver": "Weñefe tüfachi müten",
+    "Recuperar.Form.Paso2": "Trawun 2",
+    "Recuperar.Form.Responde": "Feyentun duam:",
+    "Recuperar.Form.Usuario": "Felekufe:",
+    "Recuperar.Form.Respuesta": "Eymi feyentun:",
+    "Recuperar.Form.Correcto": "PETU!",
+    "Recuperar.Form.Es": "Ñi güxam tüfachi:",
+    "Recuperar.Form.Inicio": "Weñefe müten",
+    "Recuperar.Form.Incorrecto": "Feyentun meu amunge",
+    "Recuperar.Form.Sorry": "May eymün; feyentun ka eymi ñi amunge nor küla.",
+
+
+    "Datos.From.Datos": "Ñamkülen ñi rakiduam",
+    "Datos.From.Cuenta": "Kuenta",
+    "Datos.From.User": "Dungu felekufe",
+    "Datos.From.Apellido": "Weñu",
+    "Datos.From.Correo": "Küpa malün",
+    "Datos.From.Direccion": "Rakin mapu",
+    "Datos.From.Pregunta": "Ñi rakiduam duam",
+    "Datos.From.Respuesta": "Feyentun ñi duam",
+    "Datos.From.Educacion": "Kimün",
+    "Datos.From.Nacimiento": "Tayül",
+    "Datos.From.Pass": "Rakiduam ñi güxam",
+    "Datos.From.Actualizar": "Ñamkülen",
+
+    "Footer.From.Gestion": "Küpal Weiñ",
+    "Footer.From.Titulo": "Tüfachi",
+    "Footer.From.Ingresa": "Eymi tüfa küpal küla nütram",
+    "Footer.From.Desc": "Tüfachi Inarimn",
+    "Footer.From.Escribe": "Eymi küpal küla nütram",
+    "Footer.From.Limpiar": "Pewmayafiel",
+    "Footer.From.Guardar": "Witral",
+    "Footer.From.Reciente": "We Newen Küpal",
+    "Footer.From.Public": "Küpal #",
+
+    "Clase.From.Necesitas": "Ñi ñamün üngün QR",
+
+    "Map.From.Aqui": "Che",
+    "Map.From.Ruta": "Ñamku",
+
+    "Miclase.From.Detalles": "Kimün Ñi Dungu",
+    "Miclase.From.Sede": "Ruka",
+    "Miclase.From.Asignatura": "Kimün",
+    "Miclase.From.Seccion": "Witral",
+    "Miclase.From.Nombre": "Kimün Ñi Wece",
+    "Miclase.From.Dia": "Antü",
+    "Miclase.From.Inicio": "Rakin Tüfachi",
+    "Miclase.From.Termino": "Tüfachi Pewma",
+    "Miclase.From.Hora": "Püle Rakin",
+    "Miclase.From.Horat": "Püle Pewma"
+
+
+
+
+
+    
+}

@@ -1,0 +1,42 @@
+ion-content {
+  --background: #f5f5f5;
+  --color: #444;
+}
+
+ion-button {
+  --background: #007bff;
+  --color: white;
+}
+
+.guardar-btn {
+  margin-top: 20px;
+}
+ion-card{
+  --background: transparent;
+  background-color: rgba(0, 0, 0, 0.705); /* Fondo semi-transparente */
+  padding: 10px;
+  border-radius: 15px;
+}
+ion-item{
+  --background: transparent;
+  background-color: rgba(0, 0, 0, 0.705); /* Fondo semi-transparente */
+  padding: 10px;
+  border-radius: 15px;
+}
+ h2 {
+  font-weight: bold;
+  color: rgb(241, 163, 6); /* Aquí aplicas el color también */
+  text-shadow: 
+    0 0 10px #000000, /* Primer nivel de sombra (más cercano al texto) */
+    0 0 20px #000000, /* Segundo nivel de sombra */
+    0 0 30px #000000, /* Tercer nivel de sombra */
+}
+.password-icon {
+  position: absolute;
+  right: 16px; /* Ajusta según necesites */
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+

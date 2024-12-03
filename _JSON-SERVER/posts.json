@@ -1,0 +1,12 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Primer Post de Prueba",
+      "body": "Este es un post de prueba para verificar el funcionamiento del foro.",
+      "author": "Admin",
+      "date": "2024-11-13",
+      "authorImage": "/api/placeholder/100/100"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+#mapId {
+  height: 100vh; /* Hace que el mapa ocupe todo el alto de la pantalla */
+}
+.animated-text {
+  font-size: 24px; /* Ajusta el tamaño del texto */
+  animation: slideConstant 3s linear infinite; /* Animación continua */
+  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+  font-size: 1rem; /* Tamaño del texto */
+  color: #ff9d00; /* Color del texto */
+  text-align: center; /* Alineación del texto */
+  text-shadow: 
+    0 0 10px #000000, /* Primer nivel de sombra (más cercano al texto) */
+    0 0 20px #000000, /* Segundo nivel de sombra */
+    0 0 30px #000000, /* Tercer nivel de sombra */
+
+}
+
+/* Definir la animación continua con disolución gradual */
+@keyframes slideConstant {
+  0% {
+    transform: translateX(-10%); /* Inicia fuera de la vista desde la derecha */
+    opacity: 0; /* Comienza disuelto */
+  }
+  25% {
+    opacity: 1; /* Aparece completamente al aproximarse al centro */
+  }
+  75% {
+    opacity: 1; /* Mantiene su claridad en el centro */
+  }
+  100% {
+    transform: translateX(80%); /* Sale completamente por la izquierda */
+    opacity: 0; /* Desaparece gradualmente */
+  }
+
+}

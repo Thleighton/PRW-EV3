@@ -1,0 +1,63 @@
+<ion-content>
+  <div class="background-image" style="background-image: url('/assets/images/1725086412.jpg'); background-size: cover; background-position: center; position: absolute; width: 100%; height: 100%; z-index: -1;"></div>
+
+  <ion-grid fixed *ngIf="dino" class="dino-content" style="color: white;">
+    <ion-row>
+      <ion-col size="12">
+        <h2 style="color: white; text-align: center;">{{ 'HomePage.Button.Miclase' | translate }}</h2>
+        <ion-card style="background-color: rgba(0, 0, 0, 0.8); border: 1px solid white;">
+          <ion-card-header>
+            <ion-card-title style="color: white;">{{ 'Miclase.From.Detalles' | translate }}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <table style="width: 100%; border-collapse: collapse; color: white;">
+              <tr>
+                <th style="text-align: left; padding: 8px; border: 2px solid white;">{{ 'Miclase.From.Sede' | translate }}</th>
+                <td style="padding: 8px; border: 2px solid white;">{{ dino.sede }}</td>
+              </tr>
+              <tr>
+                <th style="text-align: left; padding: 8px; border: 2px solid white;">{{ 'Miclase.From.Asignatura' | translate }}</th>
+                <td style="padding: 8px; border: 2px solid white;">{{ dino.idAsignatura }}</td>
+              </tr>
+              <tr>
+                <th style="text-align: left; padding: 8px; border: 2px solid white;">{{ 'Miclase.From.Seccion' | translate }}</th>
+                <td style="padding: 8px; border: 2px solid white;">{{ dino.seccion }}</td>
+              </tr>
+              <tr>
+                <th style="text-align: left; padding: 8px; border: 2px solid white;">{{ 'Miclase.From.Nombre' | translate }}</th>
+                <td style="padding: 8px; border: 2px solid white;">{{ dino.nombreAsignatura }}</td>
+              </tr>
+              <tr>
+                <th style="text-align: left; padding: 8px; border: 2px solid white;">{{ 'Miclase.From.Dia' | translate }}</th>
+                <td style="padding: 8px; border: 2px solid white;">{{ dino.dia }}</td>
+              </tr>
+              <tr>
+                <th style="text-align: left; padding: 8px; border: 2px solid white;">{{ 'Miclase.From.Inicio' | translate }}</th>
+                <td style="padding: 8px; border: 2px solid white;">{{ dino.bloqueInicio }}</td>
+              </tr>
+              <tr>
+                <th style="text-align: left; padding: 8px; border: 2px solid white;">{{ 'Miclase.From.Termino' | translate }}</th>
+                <td style="padding: 8px; border: 2px solid white;">{{ dino.bloqueTermino }}</td>
+              </tr>
+              <tr>
+                <th style="text-align: left; padding: 8px; border: 2px solid white;">{{ 'Miclase.From.Hora' | translate }}</th>
+                <td style="padding: 8px; border: 2px solid white;">{{ dino.horaInicio }}</td>
+              </tr>
+              <tr>
+                <th style="text-align: left; padding: 8px; border: 2px solid white;">{{ 'Miclase.From.Horat' | translate }}</th>
+                <td style="padding: 8px; border: 2px solid white;">{{ dino.horaFin }}</td>
+              </tr>
+            </table>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <div *ngIf="!dino" class="center-frame" style="color: white;">
+    <div class="picture-frame ion-text-center">
+      <img class="you-must-scan" style="width: 90%; max-width: 200px; height: auto;" src="/assets/images/que-es-un-codigo-QR.jpg">
+      <h2>{{ 'Clase.From.Necesitas' | translate }}</h2>
+    </div>
+  </div>
+</ion-content>

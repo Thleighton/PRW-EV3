@@ -1,0 +1,152 @@
+<ion-content style="--background: linear-gradient(to right, #e3f2fd, #e1f5fe); padding: 20px;">
+
+  <!-- Fondo decorativo para la página -->
+  <div *ngIf="dino" style="
+    background-image: url('/assets/images/IMG_20230310_082210.jpg');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.1;
+    z-index: -1;">
+  </div>
+
+  <!-- Contenedor principal para la información del dino -->
+  <ion-grid fixed *ngIf="dino" style="
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);">
+    <h2>{{'HomePage.Button.Miclase' | translate}}</h2>
+    <!-- Cada fila con estilo de etiqueta y valor -->
+    <ion-row style="padding: 12px 0; border-bottom: 1px solid #ddd;">
+      <ion-col size="5" style="font-weight: bold; color: #00796b;">🏢 Sede</ion-col>
+      <ion-col size="7" style="color: #333;">{{ dino.sede }}</ion-col>
+    </ion-row>
+    
+    <ion-row style="padding: 12px 0; border-bottom: 1px solid #ddd;">
+      <ion-col size="5" style="font-weight: bold; color: #00796b;">📚 Asignatura</ion-col>
+      <ion-col size="7" style="color: #333;">{{ dino.idAsignatura }}</ion-col>
+    </ion-row>
+    
+    <ion-row style="padding: 12px 0; border-bottom: 1px solid #ddd;">
+      <ion-col size="5" style="font-weight: bold; color: #00796b;">📅 Sección</ion-col>
+      <ion-col size="7" style="color: #333;">{{ dino.seccion }}</ion-col>
+    </ion-row>
+    
+    <ion-row style="padding: 12px 0; border-bottom: 1px solid #ddd;">
+      <ion-col size="5" style="font-weight: bold; color: #00796b;">🎓 Nombre Asignatura</ion-col>
+      <ion-col size="7" style="color: #333;">{{ dino.nombreAsignatura }}</ion-col>
+    </ion-row>
+    
+    <ion-row style="padding: 12px 0; border-bottom: 1px solid #ddd;">
+      <ion-col size="5" style="font-weight: bold; color: #00796b;">📆 Día</ion-col>
+      <ion-col size="7" style="color: #333;">{{ dino.dia }}</ion-col>
+    </ion-row>
+    
+    <ion-row style="padding: 12px 0; border-bottom: 1px solid #ddd;">
+      <ion-col size="5" style="font-weight: bold; color: #00796b;">⏱ Bloque Inicio</ion-col>
+      <ion-col size="7" style="color: #333;">{{ dino.bloqueInicio }}</ion-col>
+    </ion-row>
+    
+    <ion-row style="padding: 12px 0; border-bottom: 1px solid #ddd;">
+      <ion-col size="5" style="font-weight: bold; color: #00796b;">⏱ Bloque Término</ion-col>
+      <ion-col size="7" style="color: #333;">{{ dino.bloqueTermino }}</ion-col>
+    </ion-row>
+    
+    <ion-row style="padding: 12px 0; border-bottom: 1px solid #ddd;">
+      <ion-col size="5" style="font-weight: bold; color: #00796b;">🕒 Hora Inicio</ion-col>
+      <ion-col size="7" style="color: #333;">{{ dino.horaInicio }}</ion-col>
+    </ion-row>
+    
+    <ion-row style="padding: 12px 0;">
+      <ion-col size="5" style="font-weight: bold; color: #00796b;">🕔 Hora Término</ion-col>
+      <ion-col size="7" style="color: #333;">{{ dino.horaFin }}</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- Contenido de marcador de posición cuando no hay datos del dino -->
+  <div *ngIf="!dino" style="
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;">
+    
+    <div style="
+      background: #fff;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+      max-width: 350px;">
+      
+      <img src="/assets/images/you-must-scan.png" style="max-width: 80%; margin-bottom: 15px;">
+      <p style="color: #555; font-weight: bold;">Por favor, escanea el código para ver la información completa</p>
+    </div>
+  </div>
+
+</ion-content>
+
+
+
+
+
+
+
+
+
+
+<ion-content>
+
+  <div class="background-image" *ngIf="dino"></div>
+
+  <ion-grid fixed *ngIf="dino" class="dino-content">
+    <ion-row>
+      <ion-col size="5">Sede</ion-col>
+      <ion-col size="7">{{ dino.sede }}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="5">Asignatura</ion-col>
+      <ion-col size="7">{{ dino.idAsignatura }}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="5">Seccion</ion-col>
+      <ion-col size="7">{{ dino.seccion }}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="5">Nombre Asignatura</ion-col>
+      <ion-col size="7">{{ dino.nombreAsignatura }}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="5">Día</ion-col>
+      <ion-col size="7">{{ dino.dia }}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="5">Bloque Inicio</ion-col>
+      <ion-col size="7">{{ dino.bloqueInicio }}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="5">Bloque Termino</ion-col>
+      <ion-col size="7">{{ dino.bloqueTermino }}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="5">Hora Inicio</ion-col>
+      <ion-col size="7">{{ dino.horaInicio }}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="5">Hora Termino</ion-col>
+      <ion-col size="7">{{ dino.horaFin }}</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <div *ngIf="!dino" class="center-frame">
+    <div class="picture-frame ion-text-center">
+      <img class="you-must-scan" src="/assets/images/you-must-scan.png">
+    </div>
+  </div>
+
+</ion-content>

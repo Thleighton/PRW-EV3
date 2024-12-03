@@ -1,0 +1,91 @@
+$duoc-azul: #003366;
+$duoc-amarillo: #F1B634;
+$texto-blanco: #ffffff;
+$input-background: #ffffff; // Fondo blanco para el input
+
+ion-content {
+    --background: #003366; // Fondo general azul
+}
+
+.forgot-password-card {
+    margin: 10% auto;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    img.logo-uc {
+        width: 350px; // Ajustamos el tamaño del logo para que quede dentro de la caja
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        margin-bottom: 10px;
+        font-size: 1rem;
+        color: $duoc-azul;
+    }
+
+    h3 {
+        margin-bottom: 15px;
+        font-size: 1.4rem;
+        color: $duoc-azul;
+    }
+
+    .image-container {
+        margin-bottom: 10px;
+        img.error-image {
+            width: 100%; // Ajustar la imagen al tamaño del contenedor
+            max-width: 300px; // Puedes ajustar este valor según sea necesario
+            border-radius: 8px; // Esto es opcional si deseas bordes redondeados en la imagen
+        }
+    }
+
+    .login-link {
+        display: block;
+        margin-top: 15px;
+        color: $duoc-azul;
+        text-decoration: none;
+        font-size: 0.9rem;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+/* Centrar el div contenedor principal */
+.centered-container {
+    display: flex;
+    justify-content: center;   /* Centrar horizontalmente */
+    align-items: center;       /* Centrar verticalmente */
+    height: 100vh;             /* Ocupa toda la altura de la pantalla */
+    padding: 20px;             /* Añadir un pequeño padding para que no quede muy ajustado a los bordes */
+    box-sizing: border-box;     /* Asegurar que el padding no modifique el tamaño del contenedor */
+  }
+  
+  /* Estilos específicos para la tarjeta de recuperación */
+  .forgot-password-card {
+    text-align: center;        /* Centrar el texto */
+    max-width: 350px;          /* Limitar el ancho de la tarjeta */
+    width: 100%;               /* Que ocupe el 100% de su contenedor */
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);  /* Añadir una pequeña sombra para resaltar el contenido */
+    border-radius: 10px;       /* Bordes redondeados */
+    background-color: #fff;    /* Fondo blanco para el contenido */
+  }
+  
+  .logo-uc {
+    width: 150px;              /* Ajustar el tamaño del logo */
+    margin-bottom: 20px;       /* Espacio inferior entre el logo y el contenido */
+  }
+  
+  .image-container {
+    margin-bottom: 20px;       /* Espacio entre la imagen y el texto */
+  }
+  
+  .error-image {
+    width: 150px;              /* Ajustar el tamaño de la imagen */
+  }

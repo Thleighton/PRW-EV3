@@ -1,0 +1,88 @@
+<ion-content [fullscreen]="true">
+  <img class="background-image" src="/assets/images/1725086412.jpg">
+  <h2 class="ion-text-center">{{ 'Register.Title' | translate }}</h2>
+
+  <ion-card class="ion-text-center">
+    <ion-item>
+      <ion-input label="{{ 'Register.Username' | translate }}" labelPlacement="floating" [(ngModel)]="usuario.userName"></ion-input>
+    </ion-item>
+    <br>
+    <ion-item>
+      <ion-input label="{{ 'Register.FirstName' | translate }}" labelPlacement="floating" [(ngModel)]="usuario.firstName"></ion-input>
+    </ion-item>
+    <br>
+    <ion-item>
+      <ion-input label="{{ 'Register.LastName' | translate }}" labelPlacement="floating" [(ngModel)]="usuario.lastName"></ion-input>
+    </ion-item>
+    <br>
+    <ion-item>
+      <ion-input label="{{ 'Register.Email' | translate }}" labelPlacement="floating" [(ngModel)]="usuario.email" type="email"></ion-input>
+    </ion-item>
+    <br>
+    <ion-item>
+      <ion-input label="{{ 'Register.Address' | translate }}" labelPlacement="floating" [(ngModel)]="usuario.address"></ion-input>
+    </ion-item>
+    <br>
+    <ion-item>
+      <ion-input label="{{ 'Register.SecretQuestion' | translate }}" labelPlacement="floating" [(ngModel)]="usuario.secretQuestion"></ion-input>
+    </ion-item>
+    <br>
+    <ion-item>
+      <ion-input label="{{ 'Register.SecretAnswer' | translate }}" labelPlacement="floating" [(ngModel)]="usuario.secretAnswer"></ion-input>
+    </ion-item>
+    <br>
+    <ion-item class="font-size-12">
+      <ion-select [(ngModel)]="usuario.educationalLevel.id" (ionChange)="actualizarNivelEducacional($event)" label="{{ 'Register.Education' | translate }}" position="floating">
+        <ion-select-option *ngFor="let nivelEducacional of listaNivelesEducacionales" [value]="nivelEducacional.id">
+          {{nivelEducacional.name}}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+    <br>
+    <ion-item>
+      <table>  
+        <tr>  
+          <td class="font-size-12" style="color:#ffffff;">{{ 'Register.DateOfBirth' | translate }}</td> 
+          <br> 
+          <td class="cell-align-right">  
+            <input matInput [matDatepicker]="dateOfBirth"  
+              [(ngModel)]="usuario.dateOfBirth"  
+              placeholder="dd/mm/yyyy"  
+              class="date-width">  
+          </td>  
+          <td class="cell-width-0">  
+            <mat-datepicker-toggle matSuffix [for]="dateOfBirth"></mat-datepicker-toggle>  
+            <mat-datepicker #dateOfBirth></mat-datepicker>  
+          </td>  
+        </tr>  
+      </table>  
+    </ion-item>
+    <br>
+    <ion-item>
+      <ion-input 
+        label="{{ 'Register.Password' | translate }}"
+        labelPlacement="floating"
+        [(ngModel)]="usuario.password" 
+        [type]="showPassword ? 'text' : 'password'"
+        placeholder="{{ 'Register.PasswordPlaceholder' | translate }}">
+      </ion-input>
+      <ion-icon 
+        name="{{ showPassword ? 'eye-off' : 'eye' }}" 
+        [style.color]="showPassword ? 'red' : 'green'"
+        [style.fontSize]="'24px'" 
+        (click)="togglePasswordVisibility()"
+        class="password-icon">
+      </ion-icon>
+    </ion-item>
+    <br>
+  </ion-card>
+
+  <ion-button 
+    (click)="guardarUsuario()" 
+    color="primary" 
+    shape="round" 
+    expand="full" 
+    class="register-button">
+    {{ 'Register.Submit' | translate }}
+  </ion-button>
+</ion-content>

@@ -1,0 +1,9 @@
+h1, h2 {
+  font-size: 1rem; /* Tamaño del texto */
+  color: #c27904; /* Color del texto */
+  text-align: center; /* Alineación del texto */
+  text-shadow: 
+    0 0 10px #000000, /* Primer nivel de sombra (más cercano al texto) */
+    0 0 20px #000000, /* Segundo nivel de sombra */
+    0 0 30px #000000, /* Tercer nivel de sombra */
+}

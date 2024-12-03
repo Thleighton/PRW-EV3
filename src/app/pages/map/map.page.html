@@ -1,0 +1,49 @@
+<ion-header >  
+  <ion-toolbar class="transparent-bg">  
+    <ion-row>
+      <ion-col size-md="3">  
+        <ion-img src="/assets/images/duoc_transp.png" style="width: 120px; height: auto; margin-left: 10px;"></ion-img>  
+      </ion-col>  
+      <ion-col size-md="6" class="center-text">  
+        <div class=" animated-text" style="font-size: 30px;">{{'AppName' | translate}} </div>  
+      </ion-col>  
+      <ion-col size-md="3"></ion-col>  
+    </ion-row>
+   
+  </ion-toolbar>  
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+
+  <!-- El div con id "mapId" será donde se mostrará el mapa -->
+  <div id="mapId" style="height: 100%;"></div>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar class="ion-text-center" color="primary">
+    <ion-button shape="round" color="secondary" size="small"
+        (click)="goToDUOC()" >
+      DUOC
+    </ion-button>
+
+    <ion-button shape="round" color="secondary" size="small"
+        (click)="goToMyPosition()">
+        {{'Map.From.Aqui' | translate}}
+    </ion-button>
+
+    <ion-button shape="round" color="secondary" size="small"
+        (click)="showRouteToDuoc()">
+        {{'Map.From.Ruta' | translate}}
+    </ion-button>
+
+    <div *ngIf="distance">
+      <br>
+      {{ distance }} 
+    </div>
+    <ion-button expand="block" class="ion-margin-top"  (click)="volverAlInicio()">{{'Recuperar.Form.Volver' | translate}}<ion-icon name="log-out-outline" color="light"></ion-icon></ion-button>
+    
+  </ion-toolbar>
+
+</ion-footer>

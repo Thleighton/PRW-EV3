@@ -32,6 +32,8 @@
     "HomePage.Button.Miclase": "Mi clase",
     "HomePage.Button.Misdatos": "Mis datos",
     "HomePage.Button.Detener": "Detener escaneo QR",
+    "HomePage.Button.Admin": "Administrar",
+
 
     "ThemePage.Label.ColorTheme": "Tema de color:",
     "ThemePage.Color.Light": "Claro",

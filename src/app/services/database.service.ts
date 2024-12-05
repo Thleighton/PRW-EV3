@@ -17,6 +17,9 @@ export class DatabaseService {
   }
 
 
+  
+
+
   testUser1 = User.getNewUsuario(
     'atorres', 
     'atorres@duocuc.cl', 
@@ -55,6 +58,19 @@ export class DatabaseService {
     new Date(2000, 2, 20),
     'Providencia',
     'default-image.jpg');
+
+    testUser4 = User.getNewUsuario(
+      'admin', 
+      'm.salgado@duocuc.cl', 
+      'admin', 
+      '¿Cuál es tu animal favorito?', 
+      'conejo',
+      '(Admin) Martín', 
+      'Salgado ', 
+      EducationalLevel.findLevel(6)!,
+      new Date(2000, 0, 5),
+      'Quilicura',
+      'default-image.jpg');
 
   userUpgrades = [
     {
@@ -97,6 +113,8 @@ export class DatabaseService {
   private db!: SQLiteDBConnection;
   userList: BehaviorSubject<User[]> = new BehaviorSubject<User[]>([]);
   listaUsuarios: BehaviorSubject<Usuario[]> = new BehaviorSubject<Usuario[]>([]);
+  listaUsuario: BehaviorSubject<User[]> = new BehaviorSubject<User[]>([]);
+
   
   constructor(private sqliteService: SQLiteService) { }
 
@@ -129,6 +147,11 @@ export class DatabaseService {
       const user3 = await this.readUser(this.testUser3.userName);
       if (!user3) {
         await this.saveUser(this.testUser3);
+      }
+      // Verifica y guarda al usuario 'admin' si no existe
+      const user4 = await this.readUser(this.testUser4.userName);
+      if (!user4) {
+        await this.saveUser(this.testUser4);
       }
   
     } catch (error) {
@@ -332,6 +355,10 @@ export class DatabaseService {
       [cuenta])).values as Usuario[];
     return usuarios[0];
   }
+  async readUsuarios(): Promise<void> {
+    const usuarios: User[]= (await this.db.query('SELECT * FROM USER;')).values as User[];
+    this.listaUsuario.next(usuarios);
+  }
 
   async leerCorreo(cuenta: string): Promise<Usuario | undefined> {
     const usuarios: Usuario[]= (await this.db.query(
@@ -370,4 +397,28 @@ export class DatabaseService {
     return usuarios[0];
   }
 
+  async traerListaUsuarios(): Promise<User[]> {
+    try {
+      const usuarios: User[] = (await this.db.query('SELECT * FROM USER;')).values as User[];
+      console.log(usuarios, 'ReadUsuarios');
+      return usuarios;
+    } catch (error) {
+      console.error('Error al obtener usuarios', error);
+      throw error;
+    }
+  }
+
+    // Delete del CRUD
+    async eliminarUsuarioUsandoUserName(userName: string) {
+      const sql = 'DELETE FROM USER WHERE userName=?';
+      await this.db.run(sql, [userName]);
+      await this.readUsuarios();
+    }
+    
+    async leerUser(cuenta: string): Promise<User | undefined> {
+      const usuarios: User[]= (await this.db.query(
+        'SELECT * FROM USER WHERE userName=?;', 
+        [cuenta])).values as User[];
+      return usuarios[0];
+    }
 }

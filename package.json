@@ -40,7 +40,7 @@
     "@ngx-translate/core": "^15.0.0",
     "@ngx-translate/http-loader": "^8.0.0",
     "@types/leaflet": "^1.9.14",
-    "cypress": "^13.16.0",
+    "cypress": "^13.16.1",
     "ionicons": "^7.2.1",
     "jeep-sqlite": "^2.8.0",
     "jsqr": "^1.4.0",

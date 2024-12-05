@@ -1,3 +1,4 @@
+import { adminPage } from './pages/admin/admin.page';
 import { Routes } from '@angular/router';
 import { ingresoGuard } from './guards/ingreso-guard.service';
 import { inicioGuard } from './guards/inicio-guard.service';
@@ -45,5 +46,10 @@ export const routes: Routes = [
   {
     path: 'registrarme',
     loadComponent: () => import('./pages/registrarme/registrarme.page').then( m => m.RegistrarmePage)
+  },
+
+  {
+    path: 'admin',
+    loadComponent: () => import('./pages/admin/admin.page').then( m => m.adminPage)
   },
 ];

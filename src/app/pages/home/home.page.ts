@@ -1,4 +1,4 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA, ViewChild } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, OnInit, ViewChild } from '@angular/core';
 import { DinosaurComponent } from 'src/app/components/dinosaur/dinosaur.component';
 import { AuthService } from 'src/app/services/auth.service';
 import { IonContent } from '@ionic/angular/standalone'
@@ -18,6 +18,8 @@ import { MisDatosComponent } from 'src/app/components/misdatos/misdatos.componen
 import { User } from 'src/app/model/user';
 import { Usuario } from 'src/app/model/usuario';
 import { Asistencia } from 'src/app/model/asistencia';
+import { DatabaseService } from 'src/app/services/database.service';
+import { adminPage } from 'src/app/pages/admin/admin.page';
 
 @Component({
   selector: 'app-home',
@@ -28,57 +30,59 @@ import { Asistencia } from 'src/app/model/asistencia';
     CommonModule, FormsModule, TranslateModule, IonContent,
     HeaderComponent, FooterComponent,
     WelcomeComponent, QrWebScannerComponent, DinosaurComponent,
-    ForumComponent, MiClaseComponent, MisDatosComponent, WelcomeComponent  
+    ForumComponent, MisDatosComponent, WelcomeComponent, adminPage
 ],
 schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 
 // MisdatosComponent
-export class HomePage {
+export class HomePage implements OnInit{
   
   @ViewChild(FooterComponent) footer!: FooterComponent;
-  selectedComponent = 'home';
-  user: User = new User();
+  selectedComponent = 'welcome'; // Cambiado a "welcome" por defecto
+  user: any = {}; // O usa el tipo de User específico si lo tienes
+  admin_: boolean = false; // Variable para saber si el usuario es admin
+  shouldStartScanning: boolean = false;
 
-  constructor(private auth: AuthService, private scanner: ScannerService) { 
+  constructor(private auth: AuthService, private scanner: ScannerService, private bd: DatabaseService) { 
     this.auth.authUser.subscribe((user) => {
-      console.log(user);
       if (user) {
         this.user = user;
+        this.admin_ = user.userName === 'admin';
+        this.shouldStartScanning = !this.admin_; // No activar escaneo si es admin
+      }
+    });
+  
+  }
+
+  ngOnInit() {
+    this.auth.leerUsuarioAutenticado().then((userData) => {
+      if (userData) {
+        this.admin_ = userData.userName === 'admin'; // Verifica si el nombre de usuario es "admin"
+        if (this.admin_) {
+          this.selectedComponent = 'welcome'; // Inicia en la página "welcome" si el usuario es admin
+        }
       }
     });
   }
-
+  
 
   ionViewWillEnter() {
-    if (Capacitor.getPlatform() === 'web') {
-      this.selectedComponent = 'qrwebscanner';
-    } else {
-      this.initiateNativeScanner();
-    }
+    this.changeComponent('welcome');
   }
-  
-  async initiateNativeScanner() {
-    try {
-      const scannedData = await this.scanner.scan();
-      this.showDinoComponent(scannedData);
-    } catch (error) {
-      console.error('Error during native QR scanning:', error);
-      // Opcional: Muestra una notificación al usuario
-    }
-  }
-  
+
   async headerClick(button: string) {
-    debugger;
-  
-    if (button === 'testqr') {
+
+    if (button === 'testqr')
       this.showDinoComponent(Asistencia.jsonAsisExample);
-    } else if (button === 'scan') {
-      this.ionViewWillEnter(); // Llama nuevamente para reutilizar la lógica según el entorno
-    }
+
+    if (button === 'scan' && Capacitor.getPlatform() === 'web')
+      this.selectedComponent = 'qrwebscanner';
+
+    if (button === 'scan' && Capacitor.getPlatform() !== 'web')
+        this.showDinoComponent(await this.scanner.scan());
   }
- 
- 
+
   webQrScanned(qr: string) {
     this.showDinoComponent(qr);
   }
@@ -99,9 +103,12 @@ export class HomePage {
     this.changeComponent('welcome');
   }
 
-  footerClick(button: string) {
+  async footerClick(button: string) {
     console.log('Footer clicked:', button);
     this.selectedComponent = button;
+    if (button==='qrwebscanner' && Capacitor.platform != 'web'){
+      this.showDinoComponent(await this.scanner.scan());
+    }
   }
 
   changeComponent(name: string) {

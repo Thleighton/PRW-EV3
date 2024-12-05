@@ -31,11 +31,11 @@
           <ion-icon slot="start" name="help-circle-outline"></ion-icon>
           {{ preguntaSecreta }}
         </ion-label>
-        <ion-input [(ngModel)]="respuestaSecreta" placeholder="{{'Recuperar.Form.Respuesta' | translate}}"></ion-input>
+        <ion-input id="respuesta1" [(ngModel)]="respuestaSecreta" placeholder="{{'Recuperar.Form.Respuesta' | translate}}"></ion-input>
       </ion-item>
 
       <!-- Botones de acción -->
-      <ion-button expand="block" color="primary" (click)="recuperarContrasena()">
+      <ion-button id="respuesta" expand="block" color="primary" (click)="recuperarContrasena()">
         {{'Recuperar.Form.Contraseña' | translate}}
       </ion-button>
       <a href="#" class="login-link" style="display: block; text-align: center; margin-top: 10px;" (click)="volverAlInicio()">

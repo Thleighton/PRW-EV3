@@ -25,10 +25,10 @@
           <ion-icon slot="start" name="mail-outline"></ion-icon>
           {{'Recuperar.Form.Correo' | translate}}
         </ion-label>
-        <ion-input [(ngModel)]="correo" type="email" placeholder="ejm: c.aranda@duocuc.cl"></ion-input>
+        <ion-input id="correo" [(ngModel)]="correo" type="email" placeholder="ejm: c.aranda@duocuc.cl"></ion-input>
       </ion-item>
 
-      <ion-button expand="block" color="primary" (click)="recuperarContrasena()">
+      <ion-button id="validarCorreo" expand="block" color="primary" (click)="recuperarContrasena()">
         {{'Recuperar.Form.Contraseña' | translate}}
       </ion-button>
       <a href="#" class="login-link" style="display: block; text-align: center; margin-top: 10px;">

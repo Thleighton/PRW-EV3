@@ -4,9 +4,12 @@ describe('Entrar y salir con usuario correcto', () => {
     cy.viewport('iphone-x');
     cy.visit('http://localhost:8100/login');
 
+    cy.get('#cuenta').type('atorres');
+    cy.get('#contraseña').type('1234');
     // Espera que el botón "Salir" sea visible y luego presiona
     cy.get('#login').click();
-    
+    cy.url().should('include', '/home');
+    cy.get('#salir').click(); 
     // Puedes agregar aquí más comprobaciones según sea necesario
     // Ejemplo: verificar si el usuario fue redirigido a otra página o si aparece un mensaje de logout
     cy.url().should('include', '/login');  // Asumimos que te redirige a login después de hacer logout
@@ -105,62 +108,70 @@ describe('Prueba recuperar contraseña correo correcto', () => {
       cy.get('#alert-input-1-5').click();      // Hacer clic en el botón "OK" para confirmar la selección
       cy.get('.alert-button').contains('OK').click();
       cy.get('#volverLogin').click();
-      cy.url().should('include', '/login');  // Debería redirigir a login 
+      cy.url().should('include', '/login');
+      cy.get('#cuenta').type('atorres');  // Ingresa un usuario inválido
+      cy.get('#contraseña').type('1234');  // Debería redirigir a login 
       cy.get('#login').click();
       cy.url().should('include', '/home');  // Debería redirigir a home
       cy.get('#salir').click();
       cy.url().should('include', '/login');  // Debería redirigir a login 
     });
   });
-// describe('Cambiar cuenta de usuario y cerrar sesión', () => {
-//   it('Cambia el cuenta a "1111111", actualiza el perfil y cierra sesión', () => {
-//     // Configura el viewport para un dispositivo móvil
-//     cy.viewport('iphone-x');
-//     cy.visit('http://localhost:8100/login');
+describe('Cambiar cuenta de usuario y cerrar sesión', () => {
+  it('Cambia el cuenta a "1111111", actualiza el perfil y cierra sesión', () => {
+    // Configura el viewport para un dispositivo móvil
+    cy.viewport('iphone-x');
+    cy.visit('http://localhost:8100/login');
+    cy.get('#cuenta').type('atorres');
+    cy.get('#contraseña').type('1234');
+    // Ingresa al perfil de usuario
+    cy.get('#login').click();
+    cy.url().should('include', '/home');
+    cy.get('#misDatos').click();
+    cy.get('#cuentaa').find('input').type('1111', { force: true });
+    // Si el slot contiene un campo de entrada
+ // Si hay un campo de entrada dentro del slot
+    // Actualiza el perfil
+    cy.get('#actualizar').click();
+    // Cierra sesión
+    cy.get('#salir').click();
+    // Verifica que se haya redirigido al login
+    cy.url().should('include', '/login');
+    cy.get('#cuenta').type('1111');  // Ingresa un usuario inválido
+    cy.get('#contraseña').type('1234');
+    cy.get('#login').click();
+    cy.url().should('include', '/home');
+    cy.get('#salir').click();
+    cy.url().should('include', '/login');
 
-//     // Ingresa al perfil de usuario
-//     cy.get('#login').click();
-//     // cy.url().should('include', '/home');
-//     cy.get('#misDatos').click();
-//     cy.get('#cuenta2').type('1111111');  // Ingresa un usuario inválido
-//     // Actualiza el perfil
-//     cy.get('#actualizar').click();
-//     // Cierra sesión
-//     cy.get('#salir2').click();
-//     // Verifica que se haya redirigido al login
-//     cy.url().should('include', '/login');
-//     cy.get('#login').click();
-//     cy.url().should('include', '/home');
-//     cy.get('#qrCode').click();
-//     cy.get('#salir').click();
-//     cy.url().should('include', '/login');
 
+  });
+});
 
-//   });
-// });
+describe('cambiar el idioma a inglés ', () => {
+  it('cambiar el idioma a inglés y navegar por la app', () => {
+    // Configura el viewport para un dispositivo móvil
+    cy.viewport('iphone-x');
+    cy.visit('http://localhost:8100/login');
 
-// describe('cambiar el idioma a inglés ', () => {
-//   it('cambiar el idioma a inglés y navegar por la app', () => {
-//     // Configura el viewport para un dispositivo móvil
-//     cy.viewport('iphone-x');
-//     cy.visit('http://localhost:8100/login');
+    cy.get('#cuenta').type('atorres');
+    cy.get('#contraseña').type('1234');
+    // Ingresa al sistema
+    cy.get('#idioma').click();
+    // Selecciona el idioma "Inglés" (botón con aria-checked="false" para inglés)
+    cy.get('#alert-input-1-0').click();  // Asumiendo que este es el ID para "English"
+    // Hace clic en el botón "OK" para confirmar
+    cy.get('.alert-button').contains('OK').click();
 
-//     // Ingresa al sistema
-//     cy.get('#idioma').click();
-//     // Selecciona el idioma "Inglés" (botón con aria-checked="false" para inglés)
-//     cy.get('#alert-input-1-0').click();  // Asumiendo que este es el ID para "English"
-//     // Hace clic en el botón "OK" para confirmar
-//     cy.get('.alert-button').contains('OK').click();
-//     cy.get('#login').click();
-//     // cy.url().should('include', '/home');
-//     cy.get('#misDatos').click();
-//     cy.get('#qrCode').click();
-//     cy.get('#foro').click();
-//     cy.get('#miClase').click();
-//     cy.get('#salir').click();
-//     cy.url().should('include', '/login');
-//   });
-// });
+    cy.get('#login').click();
+    cy.url().should('include', '/home');
+    cy.get('#misDatos').click();
+    cy.get('#foro').click();
+    cy.get('#miClase').click();
+    cy.get('#salir').click();
+    cy.url().should('include', '/login');
+  });
+});
 
 
 

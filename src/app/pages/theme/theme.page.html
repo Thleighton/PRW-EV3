@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar color="primary" class="padding-6">
+  <ion-toolbar id="temas" color="primary" class="padding-6">
     <h4 slot="start" class="margin-top-6">
       <ion-select 
           label="{{ 'ThemePage.Label.ColorTheme' | translate }}" 
@@ -29,7 +29,7 @@
       </ion-select>
     </h4>
     <div slot="end">
-      <ion-button shape="round" (click)="goBack()">
+      <ion-button id="volverLogin" shape="round" (click)="goBack()">
         <ion-icon name="arrow-back-outline"></ion-icon>
       </ion-button>
     </div>

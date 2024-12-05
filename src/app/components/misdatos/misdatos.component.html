@@ -4,7 +4,7 @@
     <h2 class="ion-text-center">{{'Datos.From.Datos' | translate}} {{ usuario.firstName }} {{ usuario.lastName }}</h2>
 
   <ion-card class="ion-text-center">
-    <ion-item><ion-input label="{{'Datos.From.Cuenta' | translate}}" labelPlacement="floating" [(ngModel)]="usuario.userName"></ion-input></ion-item>
+    <ion-item><ion-input id="cuentaa" label="{{'Datos.From.Cuenta' | translate}}" labelPlacement="floating" [(ngModel)]="usuario.userName"></ion-input></ion-item>
     <br>
     <ion-item><ion-input label="{{'Datos.From.User' | translate}}" labelPlacement="floating" [(ngModel)]="usuario.firstName"></ion-input></ion-item>
     <br>
@@ -66,7 +66,7 @@
   
     <br>
   </ion-card>
-  <ion-button 
+  <ion-button id="actualizar" 
   (click)="guardarUsuario()" 
   color="primary" 
   shape="round" 

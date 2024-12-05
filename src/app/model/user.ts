@@ -67,6 +67,20 @@ export class User extends Person {
   //   this.db.deleteByUserName(userName);
   // }
 
+  validarPassword(): string {
+    if (!this.password) {
+      return 'Debe ingresar la contraseña';
+    }
+    if (!/^\d+$/.test(this.password)) {
+      return 'La contraseña debe ser numérica';
+    }
+    if (this.password.length !== 4) {
+      return 'La contraseña debe ser numérica de 4 dígitos';
+    }
+    return '';
+  }
+
+
   override toString(): string {
     return `\n
         User name: ${this.userName}\n
